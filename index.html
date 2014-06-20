@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>ES6 Features</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -41,6 +41,26 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
+					<h2>ES6</h2>
+				</section>
+
+				<section>
+					<p>Arrows</p>
+				</section>
+
+				<section>
+					<code>
+					function() {
+						var self = this;
+						$xhr = $.ajax({ ... })
+						$xhr.then(function(){
+							self.otherFunc();
+						});
+					}
+					</code>
+				</section>
+
+				<section>
 					<h1>. . .</h1>
 				</section>
 
@@ -50,8 +70,34 @@
 				</section>
 
 				<section>
+					<small><code>
+						function() { var args = Array.prototype.slice.call(arguments); }
+					</code></small>
+					<br><br>
+					<p>Old and busted</p>
+				</section>
+
+				<section>
+					<code>
+						function (...args) { }
+					</code>
+					<br><br>
+					<p>New hotness</p>
+				</section>
+
+				<section>
+					<h1>. . .</h1>
+				</section>
+
+				<section>
 					<h1>. . .</h1>
 					<p>Spread Operator</p>
+				</section>
+
+				<section>
+					<code>
+
+					</code>
 				</section>
 
 			</div>
