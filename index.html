@@ -1,151 +1,183 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>ES6 Features</title>
+    <title>ES6 Features</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-	<body>
+  <body>
 
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h2>ES6</h2>
-				</section>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>ES6</h2>
+        </section>
 
-				<section>
-					<p>Arrows</p>
-				</section>
+        <section>
+          <p>Arrows Functions</p>
+        </section>
 
-				<section>
-					<code>
-					function() {
-						var self = this;
-						$xhr = $.ajax({ ... })
-						$xhr.then(function(){
-							self.otherFunc();
-						});
-					}
-					</code>
-					<p>Old and busted</p>
-				</section>
+        <section>
+<pre><code>function() {
+  var self = this;
+  $xhr = $.ajax({ ... })
+  $xhr.then(function(){
+    self.otherFunc();
+  });
+}
+</code></pre>
+          <p>Old and busted</p>
+        </section>
 
-				<section>
-					<code>
-						function() {
-							$xhr = $.ajax({ ... })
-							$xhr.then((response) => {
-								this.otherFunc(response);
-							});
-						}
-					</code>
-					<p>New hotness</p>
-				<section>
-					<h1>. . .</h1>
-				</section>
+        <section>
+<pre><code>function() {
+  var $xhr = $.ajax({ ... })
+  $xhr.then((response) => {
+    this.otherFunc(response);
+  });
+}
+</code></pre>
+          <p>New hotness</p>
+        </section>
 
-				<section>
-					<h1>. . .</h1>
-					<p>Rest Parameters</p>
-				</section>
+        <section>
+          <div><code>() => {}</code></div><br>
+          <div><code>x => x * x</code></div><br>
+          <ul>
+            <li>A few different definitions</li>
+            <li>Implicit return for a single expression</li>
+            <li>Lexical <code>this</code></li>
+            <li>Optional parens for a single argument</li>
+            <li>No <code>function</code> keyword</li>
+          </ul>
+        </section>
 
-				<section>
-					<small><code>
-						function() { var args = Array.prototype.slice.call(arguments); }
-					</code></small>
-					<br><br>
-					<p>Old and busted</p>
-				</section>
+        <section>
+          <code>[1,2,3].reduce((x, y) => x + y, 0); // 6</code>
+          <p>Simple reduce</p>
+        </section>
 
-				<section>
-					<code>
-						function (...args) { }
-					</code>
-					<br><br>
-					<p>New hotness</p>
-				</section>
+        <section>
+          <code>const</code><br>
+          <br>
+          <p>Simple constants, existed in C since 1972.</p>
+          <p>Finally making it to JS, 20 years after inception.</p>
+        </section>
 
-				<section>
-					<h1>. . .</h1>
-				</section>
+        <section>
+          <h1>. . .</h1>
+        </section>
 
-				<section>
-					<h1>. . .</h1>
-					<p>Spread Operator</p>
-				</section>
+        <section>
+          <h1>. . .</h1>
+          <p>Rest Parameters</p>
+        </section>
 
-				<section>
-					<code>
+        <section>
+          <small><code>
+            function() { var args = Array.prototype.slice.call(arguments); }
+          </code></small>
+          <br><br>
+          <p>Old and busted</p>
+        </section>
 
-					</code>
-				</section>
+        <section>
+          <code>
+            function (...args) { }
+          </code>
+          <br><br>
+          <p>New hotness</p>
+        </section>
 
-			</div>
-		</div>
+        <section>
+          <h1>. . .</h1>
+        </section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+        <section>
+          <h1>. . .</h1>
+          <p>Spread Operator</p>
+        </section>
 
-		<script>
+        <section>
+          <code>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+          </code>
+        </section>
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+        <section>
+          <h3>References</h3>
+          <ul>
+            <li>http://kangax.github.io/compat-table/es6/
+            <li>https://github.com/lukehoban/es6features
+          </ul>
+        </section>
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
+      </div>
+    </div>
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
 
-		</script>
+    <script>
 
-	</body>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
 </html>
