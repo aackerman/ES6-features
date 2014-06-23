@@ -75,7 +75,8 @@
           <div><code>() => {...}</code></div><br>
           <div><code>x => x * x</code></div><br>
           <ul>
-            <li>Implicit return for a single expression</li>
+            <li>Implicit return for an expression</li>
+            <li>Optional block for an expression</li>
             <li>Optional parens for a single argument</li>
             <li>Lexical <code>this</code></li>
           </ul>
@@ -97,7 +98,13 @@
 
         <section>
           <code>let</code>
-          <p>Block scoped variables</p>
+          <br><br>
+          <ul>
+            <li>Scoped to a single block</li>
+            <li>Must be declared before use</li>
+            <li>Cannot be declared multiple times in single block</li>
+            <li>Can be declared multiple times in single function</li>
+          </ul>
         </section>
 
         <section>
