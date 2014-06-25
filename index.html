@@ -195,6 +195,7 @@ string`
           <code>Object.assign( target, ...sources )</code>
           <br><br>
           <p>Analogous to <code>_.extend</code> or <code>$.extend</code></p>
+          <p>No recursive option 😭</p>
         </section>
 
         <section>
@@ -207,7 +208,19 @@ string`
         </section>
 
         <section>
-
+          <h3>Native Promises</h3>
+          <p>Smaller library dependencies</p>
+          <p>Libraries will still be used for sugar</p>
+<pre><code>let p = new Promise();
+p.then((value) => {
+  console.log(value);
+}, (err) => {
+  console.log(err);
+})
+p.fulfill('hello'); // hello
+</code></pre>
+          <p>DOM promises are coming separately from ES6</p>
+          <p>ES6 Promises are a superset of DOM promises</p>
         </section>
 
         <section>
@@ -215,6 +228,7 @@ string`
           <ul>
             <li>http://kangax.github.io/compat-table/es6/
             <li>https://github.com/lukehoban/es6features
+            <li>http://people.mozilla.org/~jorendorff/es6-draft.html
           </ul>
         </section>
 
