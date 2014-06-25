@@ -49,7 +49,8 @@
         </section>
 
         <section>
-<pre><code>function() {
+<pre><code data-trim>
+function() {
   var self = this;
   $xhr = $.ajax({ ... })
   $xhr.then(function(){
@@ -61,7 +62,8 @@
         </section>
 
         <section>
-<pre><code>function() {
+<pre><code data-trim>
+function() {
   var $xhr = $.ajax({ ... })
   $xhr.then((response) => {
     this.otherFunc(response);
@@ -140,7 +142,8 @@
           <h1>. . .</h1>
           <p>Spread Operator</p>
           <p>Used to spread an array into positional arguments</p>
-<pre><code>function f(x, y, z) {
+<pre><code data-trim>
+function f(x, y, z) {
   return x + y + z;
 }
 // Pass each elem of array as argument
@@ -150,7 +153,8 @@ f(...[1,2,3]) == 6
 
         <section>
           <p>Class syntax</p>
-<pre><code>class Chicken extends Animal {
+<pre><code data-trim>
+class Chicken extends Animal {
   constructor() {
     super();
     this.wings = 2;
@@ -158,7 +162,8 @@ f(...[1,2,3]) == 6
   hasBones() {
     return true;
   }
-}</code></pre>
+}
+</code></pre>
           <ul>
             <li>Constructor initializers</li>
             <li>Inheritance</li>
@@ -171,7 +176,8 @@ f(...[1,2,3]) == 6
 
         <section>
           <p>Computer Property Names in Object literals</p>
-<pre><code>var x = 'z';
+<pre><code data-trim>
+var x = 'z';
 var foo = { [x]: 1 };
 console.log(foo['z']); // 1
 </code></pre>
@@ -179,7 +185,8 @@ console.log(foo['z']); // 1
 
         <section>
           <p>Template strings</p>
-<pre><code>var x = 'multi-line';
+<pre><code data-trim>
+let x = 'multi-line';
 `a real
 
 ${x} JS
@@ -211,7 +218,8 @@ string`
           <h3>Native Promises</h3>
           <p>Smaller library dependencies</p>
           <p>Libraries will still be used for sugar</p>
-<pre><code>let p = new Promise();
+<pre><code data-trim>
+let p = new Promise();
 p.then((value) => {
   console.log(value);
 }, (err) => {
