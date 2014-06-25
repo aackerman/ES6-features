@@ -140,9 +140,6 @@
           <h1>. . .</h1>
           <p>Spread Operator</p>
           <p>Used to spread an array into positional arguments</p>
-        </section>
-
-        <section>
 <pre><code>function f(x, y, z) {
   return x + y + z;
 }
@@ -168,6 +165,7 @@ f(...[1,2,3]) == 6
             <li>Super calls</li>
             <li>Static functions</li>
             <li>Sugar on top of current sematics</li>
+            <li>Native built-ins can be extended</li>
           </ul>
         </section>
 
@@ -188,9 +186,28 @@ ${x} JS
 
 string`
 </code></pre>
-          <p>Multiline strings</p>
+          <p>Multiline strings using `backticks`</p>
           <p>Interpolation using <code>${variable}</code> syntax</p>
           <p>Sugar for string construction</p>
+        </section>
+
+        <section>
+          <code>Object.assign( target, ...sources )</code>
+          <br><br>
+          <p>Analogous to <code>_.extend</code> or <code>$.extend</code></p>
+        </section>
+
+        <section>
+          <code>Object.is</code><br>
+          <br>
+          <p>Essentially triple equals with special handling for <code>NaN</code> and <code>+0/-0</code></p>
+          <br>
+          <code>Object.is(NaN, NaN); // true</code><br>
+          <code>NaN === NaN // false</code><br>
+        </section>
+
+        <section>
+
         </section>
 
         <section>
