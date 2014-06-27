@@ -42,14 +42,18 @@
       <div class="slides">
         <section>
           <h2>ES6</h2>
+        </section>
+
+        <section>
           <img src="sugars.jpg" height="500px">
         </section>
 
         <section>
-          <p>Arrows Functions</p>
-        </section>
+          <section>
+            <p>Arrows Functions</p>
+          </section>
 
-        <section>
+          <section>
 <pre><code data-trim>
 function() {
   var self = this;
@@ -59,10 +63,10 @@ function() {
   });
 }
 </code></pre>
-          <p>Old and busted</p>
-        </section>
+            <p>Old and busted</p>
+          </section>
 
-        <section>
+          <section>
 <pre><code data-trim>
 function() {
   var $xhr = $.ajax({ ... })
@@ -71,25 +75,54 @@ function() {
   });
 }
 </code></pre>
-          <p>New hotness</p>
+            <p>New hotness</p>
+          </section>
+          <section>
+            <div><code>() => {...}</code></div><br>
+            <div><code>x => x * x</code></div><br>
+            <ul>
+              <li>Implicit return for an expression</li>
+              <li>Optional block for an expression</li>
+              <li>Optional parens for a single argument</li>
+              <li>Lexical <code>this</code></li>
+            </ul>
+          </section>
+
+          <section>
+            <p><code>[1,2,3].reduce((x, y) => x + y, 0); // 6</code></p>
+            <br>
+            <p>Simple reduce</p>
+          </section>
         </section>
 
         <section>
-          <div><code>() => {...}</code></div><br>
-          <div><code>x => x * x</code></div><br>
-          <ul>
-            <li>Implicit return for an expression</li>
-            <li>Optional block for an expression</li>
-            <li>Optional parens for a single argument</li>
-            <li>Lexical <code>this</code></li>
-          </ul>
+          <p>String functions</p>
+<pre><code data-trim>
+String.prototype.startsWith = function(s) {
+    return this.indexOf(s) === 0;
+};
+
+String.prototype.endsWith = function(s) {
+    var t = String(s);
+    var index = this.lastIndexOf(t);
+    return index >= 0 && index === this.length - t.length;
+};
+
+String.prototype.contains = function(s) {
+    return this.indexOf(s) !== -1;
+};
+
+String.prototype.toArray = function() {
+    return this.split('');
+};
+
+String.prototype.repeat
+String.fromCodePoint
+String.prototype.codePointAt
+</code></pre>
         </section>
 
-        <section>
-          <p><code>[1,2,3].reduce((x, y) => x + y, 0); // 6</code></p>
-          <br>
-          <p>Simple reduce</p>
-        </section>
+
 
         <section>
           <code>const</code><br>
