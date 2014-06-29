@@ -99,24 +99,22 @@ function() {
           <p>String functions</p>
 <pre><code data-trim>
 String.prototype.startsWith = function(s) {
-    return this.indexOf(s) === 0;
+  return this.indexOf(s) === 0;
 };
-
 String.prototype.endsWith = function(s) {
-    var t = String(s);
-    var index = this.lastIndexOf(t);
-    return index >= 0 && index === this.length - t.length;
+  var t = String(s);
+  var index = this.lastIndexOf(t);
+  return index >= 0 && index === this.length - t.length;
 };
-
 String.prototype.contains = function(s) {
-    return this.indexOf(s) !== -1;
+  return this.indexOf(s) !== -1;
 };
-
+</code></pre>
+<pre><code data-trim>
 String.prototype.toArray = function() {
-    return this.split('');
+  return this.split('');
 };
-
-String.prototype.repeat
+String.prototype.repeat = function(n) { n = n || 1; return Array(n+1).join(this);  }
 String.fromCodePoint
 String.prototype.codePointAt
 </code></pre>
